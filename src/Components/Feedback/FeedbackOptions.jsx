@@ -7,14 +7,14 @@ class FeedbackOptions extends Component {
   render() {
   return (
     <div>
-      {this.props.options.map(buttonName => (
-        <button key={buttonName}
+      {this.props.options.map(label => (
+        <button key={label}
           className={s.button}
           onClick={() => {
-          this.props.onLeaveFeedback(buttonName);
+          this.props.onLeaveFeedback(label);
          }
         }
-           type="button">{buttonName}</button>
+           type="button">{label}</button>
       ))}
     </div>
   );}

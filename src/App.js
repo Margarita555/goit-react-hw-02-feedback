@@ -12,9 +12,9 @@ class App extends Component {
   bad: 0
   }
  
-  onLeaveFeedback = (value) => {
+  onLeaveFeedback = (label) => {
     this.setState(prevState => ({
-      [value]: prevState[value] + 1
+      [label]: prevState[label] + 1
     })) 
   }
 
@@ -42,7 +42,7 @@ class App extends Component {
     <div className="App">
       <Section title="Please leave feedback">
         <FeedbackOptions
-          options={Object.keys(this.state)}
+          options={['good', 'neutral', 'bad']}
           onLeaveFeedback={this.onLeaveFeedback}
         />
         {total ? <Statistics
