@@ -37,7 +37,7 @@ class App extends Component {
     const statistics = Object.entries(this.state);
     const options = Object.keys(this.state);
     return (
-      <div className="App">
+      <div className="app">
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={options}
